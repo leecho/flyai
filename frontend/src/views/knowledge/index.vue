@@ -2,7 +2,7 @@
   <div class="container">
     <a-row :gutter="20" align="stretch">
       <a-col :span="24">
-        <a-card class="general-card" :title="$t('menu.list.cardList')">
+        <a-card class="general-card" title="应用">
           <a-row justify="space-between">
             <a-col :span="24">
               <RulesPreset />

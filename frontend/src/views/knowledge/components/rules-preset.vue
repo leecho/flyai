@@ -22,6 +22,8 @@
           :description="item.introduction"
           :default-value="true"
           :tag-text="$t('cardList.preset.tag')"
+          open-txt="打开"
+          close-txt="编辑"
           @click="open(item)"
         >
           <template #skeleton>

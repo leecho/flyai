@@ -17,24 +17,6 @@
             <a-typography-text style="margin-right: 10px">
               {{ title }}
             </a-typography-text>
-            <template v-if="showTag">
-              <a-tag
-                v-if="open && isExpires === false"
-                size="small"
-                color="green"
-              >
-                <template #icon>
-                  <icon-check-circle-fill />
-                </template>
-                <span>{{ tagText }}</span>
-              </a-tag>
-              <a-tag v-else-if="isExpires" size="small" color="red">
-                <template #icon>
-                  <icon-check-circle-fill />
-                </template>
-                <span>{{ expiresTagText }}</span>
-              </a-tag>
-            </template>
           </template>
           <template #description>
             {{ description }}
@@ -51,20 +33,20 @@
             </a-button>
           </template>
           <template v-else>
-            <a-button v-if="open" @click="handleToggle">
+            <a-button v-if="open" size="small" @click="handleToggle">
               {{ closeTxt }}
             </a-button>
-            <a-button v-else-if="!open" type="outline" @click="handleToggle">
+            <a-button v-else-if="!open" size="small" type="outline" @click="handleToggle">
               {{ openTxt }}
             </a-button>
           </template>
         </a-space>
         <div v-else>
           <a-space>
-            <a-button @click="toggle(false)">
+            <a-button size="small" @click="toggle(false)">
               {{ closeTxt }}
             </a-button>
-            <a-button type="primary" @click="toggle(true)">
+            <a-button type="primary" size="small" @click="toggle(true)">
               {{ openTxt }}
             </a-button>
           </a-space>
